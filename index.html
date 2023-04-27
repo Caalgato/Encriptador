@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de texto</title>
+    <link rel="icon" href="imagenes/Logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <div class="container-left">
+
+                <section class="typeText">
+                    <textarea id="typeText" name="typeText" cols="30" rows="10" placeholder="Ingrese el texto aquí"
+                        oninput="clearResult();checkText()"></textarea>
+                </section>
+
+                <section>
+                    <p id="p-exeptions">Sólo letras miniusculas y sin acentos</p>
+                </section>
+
+                <section>
+                    <button onclick="encryptText()" id="encrypt" class="encrypt" type="button"
+                        onclick="showResult()">Encriptar</button>
+                    <button onclick="decryptText()" id="decrypt" class="decrypt" type="button">Desencriptar</button>
+                </section>
+
+            </div>
+
+            <div class="container-right">
+
+                <section class="rectangle">
+
+                    <section class="result" style="display:none;">
+                        <textarea id="result" name="result" cols="30" rows="10 " readonly></textarea>
+                        <button id="copy" class="copy" type="button" onclick="copyText()">Copiar</button>
+                    </section>
+
+                    <section class="hide-section" id="hide-section">
+                        <img src="imagenes/Empty.svg">
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </section>
+
+                </section>
+            </div>
+
+            <div class="footer">
+                <footer>
+                    <a href="https://www.facebook.com/aluracursoslatam/">Credits to <i class="fab fa-facebook"></i></a>
+                    Made by
+                    <a href="https://github.com/Caalgato"><i class="fab fa-github"></i></a>
+                </footer>
+            </div>
+
+        </div>
+    </main>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
